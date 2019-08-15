@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flowGraph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.flowfragmentapp.SettingsFragment"
+        android:label="fragment_child_settings"
+        tools:layout="@layout/fragment_child_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.flowfragmentapp.StartFragment"
+        android:label="fragment_child_start"
+        tools:layout="@layout/fragment_child_start" >
+        <action
+            android:id="@+id/action_startFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:popUpTo="@+id/startFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.flowfragmentapp.CalendarFragment"
+        android:label="fragment_child_calendar"
+        tools:layout="@layout/fragment_child_calendar" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.flowfragmentapp.MenuFragment"
+        android:label="fragment_child_menu"
+        tools:layout="@layout/fragment_child_menu" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.flowfragmentapp.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <!--<action-->
+        <!--android:id="@+id/action_global_detailFragment"-->
+        <!--app:destination="@id/detailFragment"-->
+        <!--app:popUpTo="@+id/startFragment"/>-->
+
+</navigation>

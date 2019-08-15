@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item-->
+    <!--android:id="@+id/navigation_search"-->
+    <!--android:icon="@drawable/ic_nav_search"-->
+    <!--android:title="@string/navigation_search"-->
+    <!--android:visible="false" />-->
+
+    <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_nav_settings"
+            android:title="@string/navigation_settings" />
+
+    <item
+            android:id="@+id/startFragment"
+            android:icon="@drawable/ic_nav_start"
+            android:title="@string/navigation_start" />
+
+    <item
+            android:id="@+id/calendarFragment"
+            android:icon="@drawable/ic_nav_calendar"
+            android:title="@string/navigation_calendar"/>
+
+    <item
+            android:id="@+id/menuFragment"
+            android:icon="@drawable/ic_nav_menu"
+            android:title="@string/navigation_categories" />
+
+</menu>
