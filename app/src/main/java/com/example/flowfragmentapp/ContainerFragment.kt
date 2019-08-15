@@ -1,31 +1,25 @@
 package com.example.flowfragmentapp
 
 
-import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.fragment_flow.*
-import androidx.navigation.NavController
+import kotlinx.android.synthetic.main.fragment_container.*
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 
 
-class FlowFragment : Fragment()/*, BottomNavigationView.OnNavigationItemSelectedListener*/ {
+class ContainerFragment : Fragment()/*, BottomNavigationView.OnNavigationItemSelectedListener*/ {
 
 
 //    private val mainNavController: NavController? by lazy { activity?.findNavController(R.id.nav_host_child) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_flow, container, false)
+        val view = inflater.inflate(R.layout.fragment_container, container, false)
 
 //        val navHost = NavHostFragment.create(R.navigation.container_graph)
 //        childFragmentManager
@@ -40,11 +34,11 @@ class FlowFragment : Fragment()/*, BottomNavigationView.OnNavigationItemSelected
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.d("Fragment", "FlowFragment - onActivityCreated")
+        Log.d("Fragment", "ContainerFragment - onActivityCreated")
 //        setupNavigationListener()
         setupNavigation()
 
-        val args = FlowFragmentArgs.fromBundle(arguments!!)
+        val args = ContainerFragmentArgs.fromBundle(arguments!!)
 
         if (args.detail) {
 //            val navControllerChild: NavController? by lazy { activity?.findNavController(R.id.nav_host_child) }
